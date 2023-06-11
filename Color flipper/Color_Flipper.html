@@ -1,0 +1,50 @@
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+    <script>
+      const colors = [
+        "red",
+        "orange",
+        "yellow",
+        "green",
+        "blue",
+        "indigo",
+        "violet",
+        "purple",
+        "pink",
+        "brown",
+        "black",
+        "white",
+        "gray",
+        "silver",
+        "gold",
+      ];
+      window.addEventListener("DOMContentLoaded", function () {
+        var userSelection = document.getElementsByClassName("color_changer");
+        var textSelector   = document.getElementsByClassName("text_changer")
+        
+        userSelection[0].addEventListener("click", function () {
+          const color  =colors[Math.floor(Math.random() * colors.length)] ;
+          document.body.style.backgroundColor = color  ;
+
+          textSelector[0].innerHTML =  color; 
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div class="aplication_textbox">
+      <div class="text_1">Color Flipper</div>
+      <div class="text_2">Simple Hex</div>
+    </div>
+    <div class="center_box">
+      <div class="text_display">
+        <div>Background Color :&nbsp;</div>
+        <div class="text_changer">Red</div>
+      </div>
+
+      <div><button class="color_changer">Click me</button></div>
+    </div>
+  </body>
+</html>
