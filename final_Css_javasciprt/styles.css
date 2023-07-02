@@ -126,6 +126,7 @@
     
 
 }
+/* google searchBar function  */
 .searchBar 
 {
     display: flex;
@@ -137,6 +138,7 @@
     border-radius: 300px;
     position: relative;
     box-shadow: var(--dark-shadow) ;
+    
     
 }
 .searchBar  img {
@@ -158,8 +160,78 @@
     border: none;    
 }
 
+.clickSearchBar 
+{
+    border-radius: 10px 10px 0px 0px ; 
+}
+/* search history */
+.searchInfo 
+{
+background-color: white;
+ flex-direction: column;
+ box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
+ padding-top: 10px;
+ display: none;
+ 
+}
+.displaySearchInfo 
+{
+    display: flex;
+}
+ 
+/* the value of each search   */
+.searchHistory 
+{
+    display: flex ;
+    height: 50px;
+    padding-left: 20px;
+    align-items: center;
+    padding-right: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    
+}
+.searchHistory:hover 
+{
+    background-color: #f1f3f4;
+    cursor: pointer;
+}
+.buttonClock 
+{
+    height: 40px;
+    border: none;
+    background-color: transparent;
+}
+.clockImage
+{
+  height: 75%;
+}
+.buttonXImage
+{   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    width: 30px;
+    border: none;
+    background-color: transparent;
+    border-radius: 75%;
+}
+.xImage
+{
+    height: 50%;
 
+}
+.buttonXImage:hover
+{
+    background-color: var(--clr-grey-6);
+    cursor: pointer;
+}
 
+.textHistory
+{
+    flex: 1;
+}
 
 
 

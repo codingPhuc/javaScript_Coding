@@ -1,0 +1,53 @@
+<html lang="en">
+  <head>
+    <style>
+        Not possible, because box-shadow is generated based on the entire boundary of the element — you can't select which boundaries you don't want the shadow to be computed... unless you are willing to set a negative offset on the y-axis:
+
+      box-shadow: 0 -19px 19px 2px rgba(0, 0, 0, 0.1);
+      But that will mean that the shadow will be larger on the top. Another way is to obscure the shadow at the bottom with a pseudo-element, but that presents several problems:
+
+      Your background will have to be of solid, uniform colour (patterns will mismatch)
+      The shadow will end abruptly at the bottom
+      The CSS for this fix would be as follow (you might have to adjust the pixel values if you change the shadow blur size).
+
+      div:after {
+          background-color: #fff;
+          height: 20px;
+          content: "";
+          position: absolute;
+          bottom: -20px;
+          left: -20px;
+          right: -20px;
+      }
+      See proof-of-concept example below:
+
+      body {
+        padding: 50px;
+      }
+
+      div {
+        margin: 0 auto 50px auto;
+        width: 50%;
+        height: 50px;
+        box-shadow: 0 5px 19px 2px rgba(0, 0, 0, 0.1);
+        position: relative;
+      }
+
+      div::after {
+        background-color: blue;
+        height: 20px;
+        content: "";
+        position: absolute;
+        bottom: -10px;
+        left: 0px;
+        right: 0px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>Content</div>
+    <div>Content</div>
+    <div>Content</div>
+    <div>Content</div>
+  </body>
+</html>
