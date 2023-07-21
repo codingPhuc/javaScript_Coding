@@ -26,7 +26,7 @@ window.addEventListener("DOMContentLoaded", setupItems);
 function addItem(e) {
   e.preventDefault();
   const value = grocery.value;
-  const id = new Date().getTime().toString();
+  const id = new Date().getTime().toString();// generating a unique id 
 
   if (value !== "" && !editFlag) {
     const element = document.createElement("article");
