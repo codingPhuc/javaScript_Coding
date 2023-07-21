@@ -20,12 +20,13 @@
         "silver",
         "gold",
       ];
-      window.addEventListener("DOMContentLoaded", function () {
+      window.addEventListener("DOMContentLoaded", function () { // the resond we add the event listener for window is because we want to have the javascript code ex before the html 
+        // get the class by the name  
         var userSelection = document.getElementsByClassName("color_changer");
         var textSelector   = document.getElementsByClassName("text_changer")
-        
+        // 
         userSelection[0].addEventListener("click", function () {
-          const color  =colors[Math.floor(Math.random() * colors.length)] ;
+          const color  =colors[Math.floor(Math.random() * colors.length) ]  ; // get a random number between  the list 
           document.body.style.backgroundColor = color  ;
 
           textSelector[0].innerHTML =  color; 

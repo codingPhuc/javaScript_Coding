@@ -46,13 +46,13 @@ about.addEventListener("click",function(e)
     {
         btns.forEach(function(btn){
             btn.classList.remove("active");
-        });
-        e.target.classList.add("active");
+        }); // remove all the other click button 
+        e.target.classList.add("active"); // add the button that are ative 
         articles.forEach(function(article){
             article.classList.remove("active"); 
 
         }); 
-        article = document.getElementById(id);
+        article = document.getElementById(id);// target the article that was click 
         article.classList.add("active");
     }
 });
